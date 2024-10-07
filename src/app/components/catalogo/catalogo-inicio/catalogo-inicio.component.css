@@ -1,0 +1,12 @@
+img{
+    width: 100%;
+    height: 240px;
+}
+
+.card-body {
+    min-height: 150px; /* Ajusta este valor según lo que necesites */
+}
+
+.card-title {
+    word-wrap: break-word; /* Permite que el texto se divida en varias líneas */
+}

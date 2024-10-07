@@ -1,0 +1,26 @@
+<div class="container mt-2">
+    <div class="container-sm">
+        <h2 class="text-center">Catálogo</h2>
+        <hr />
+
+        <div class="row">
+            @for(item of productos; track item.id){
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-1">
+                <div class="card h-100 d-flex flex-column">
+                    <img [src]="'img/' + item.imagen" alt="" class="card-img-top">
+                    <div class="card-body d-flex flex-column">
+                        <!-- Nombre del producto que se muestra completo -->
+                        <p class="fw-bold card-title">{{item.nombre}}</p>
+                        <div class="d-flex justify-content-between align-items-center mt-auto">
+                            <button (click)="agregarProducto(item)" type="button" class="btn btn-sm btn-dark">
+                                <i class="fa fa-shopping-cart"></i> Agregar
+                            </button>
+                            <small class="fw-bold">$ {{item.precio}}</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+</div>
