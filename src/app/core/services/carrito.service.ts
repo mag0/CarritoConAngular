@@ -42,7 +42,7 @@ export class CarritoService {
 
   getTotal(){
     const total = this.listCarrito.reduce((sum, item) => 
-      sum + item.producto.precio * item.cantidad, 0
+      sum + item.producto.price * item.cantidad, 0
     );
     return total;
   }
