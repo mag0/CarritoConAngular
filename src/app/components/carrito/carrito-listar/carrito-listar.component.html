@@ -1,6 +1,20 @@
+<style>
+    .table-auto {
+        table-layout: auto;
+        /* Permitir que las columnas se ajusten automáticamente según el contenido */
+        width: 100%;
+        /* Ocupar todo el ancho disponible */
+    }
+
+    .table-row {
+        height: auto;
+        /* Auto para permitir el crecimiento hacia abajo */
+    }
+</style>
+
 <div class="mx-auto max-w-4xl relative overflow-x-auto shadow-md sm:rounded-lg mt-4">
     <div class="mx-auto max-w-4xl relative overflow-x-auto shadow-md sm:rounded-lg">
-        <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+        <table class="table-auto text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
             <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                 <tr>
                     <th scope="col" class="px-6 py-3">Product name</th>
@@ -12,8 +26,8 @@
             </thead>
             <tbody>
                 @for(item of listCarrito; track item.producto) {
-                <tr>
-                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                <tr class="table-row">
+                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 dark:text-white">
                         {{item.producto.title}}
                     </th>
                     <td class="px-6 py-4">
@@ -24,9 +38,9 @@
                     </td>
                     <td class="px-6 py-4">
                         <input type="number" [(ngModel)]="item.cantidad" (keydown)="onKeyDown($event)" min="1"
-                            id="number-input" aria-describedby="helper-text-explanation" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 
-                            focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 
-                            dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 
+                            id="number-input" aria-describedby="helper-text-explanation" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500   
+                            focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600   
+                            dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500   
                             dark:focus:border-blue-500" required />
                     </td>
                     <td class="px-6 py-4">
