@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/ecommerce/browser/browser",
+            "outputPath": "dist/ecommerce",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
